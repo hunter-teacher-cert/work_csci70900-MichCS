@@ -3,11 +3,10 @@
 
 /*
 Your driver file should contain code to (in suggested development order)
-instantiate a newly-created Time object (aka "instance of class Time") with default value(s)
-instantiate a newly-created Time object with specified value(s)
-assign a Time var the value null
-assign a Time var the value of an existing Time var
+
+
 print all of the above (See multiple ways to do this? Try all -- and document in comments!)
+
 test for equality of each of the Time instances above. Print results.
 add two Time objects and print results
 add two Time objects and save the result in another Time object
@@ -28,21 +27,32 @@ public class Driver {
     Time t;
 
     //assign var the address of a newly-apportioned Time object
-    //Print default values
+    //instantiate a newly-created Time object (aka "instance of class Time") with default value(s)
     t = new Time();
     System.out.print("Default time = ");
-    printTime(t);
+    printTime(t); //Print default values
     
     
-    //Print specified values
+    //instantiate a newly-created Time object with specified value(s)
     t = new Time(13,51,30.2);
     System.out.print("Specified time = ");
+    printTime(t); //Print specified values
+    
+    //assign a Time var the value null
+    Time var = null;
+
+    //assign a Time var the value of an existing Time var
+    var = t;
+    System.out.print("This is no longer null. The time is now: ");
     printTime(t);
+    
+
   }//end main()
 
 //Method to print time
-public static void printTime(Time t) {
+  public static void printTime(Time t) {
     System.out.printf("%02d:%02d:%04.1f\n",
         t.hour, t.minute, t.second);
-}
+  }//end of printTime Method
+
 }//end class
