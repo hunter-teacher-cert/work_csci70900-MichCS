@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.*;
 
-public class SortDemoDriver {
+public class SortDemoDriver { //call to the 1st constructor
     public static void main(String[] args) {
 
-	SortDemo sd = new SortDemo();
+	SortDemo sd = new SortDemo(); //call to the second constructor
 	System.out.println(sd);
 
 	SortDemo sd2 = new SortDemo(20);
