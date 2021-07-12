@@ -1,4 +1,4 @@
-public class Triangle {
+public class isTriangle {
     public static void main(String args[]) {
       
 

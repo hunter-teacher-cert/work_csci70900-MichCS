@@ -17,26 +17,29 @@ Part 3:
   1. Complete the sort method - read comments for description
   2. Uncomment the lines in sortDemoDriver to test.
 */
+
 public class sortDemo{
     /* Instance Variables */
     private ArrayList<Integer> data;  // to store the data
     private Random r;
     //Constructor 1 - Loads 15 random numbers into data.
     public SortDemo(){
-	data = new ArrayList<Integer>(); //initialize the private ArrayList data
-	r = new Random();  //initializing a Random object so that it can generate random numbers
-	for (int i=0;i<15;i++){ //loop from 0 to 14 (inclusive), increments by 1
-	    data.add(r.nextInt(20)); //generates a random number from 0 to 20 and adds it to the ArrayList data
-	} //end for
+        data = new ArrayList<Integer>(); //initialize the private ArrayList data
+        r = new Random();  //initializing a Random object so that it can generate random numbers
+        for (int i=0;i<15;i++){ //loop from 0 to 14 (inclusive), increments by 1
+          data.add(r.nextInt(20)); //generates a random number from 0 to 20 and adds it to the ArrayList data
+      } //end for
     } //end SortDemo()
+
 	//Constructor 2 - SortDemo with parameter size - Loads size random integers to data
     public SortDemo(int size){ //takes parameter size
-	data = new ArrayList<Integer>(); //initializing data ArrayList
-	r = new Random(); //initializing Random object
-	for (int i=0;i<size;i++){ //loop from 0 to size - 1 (inclusive) increments by 1
-	    data.add(r.nextInt(20));  //generates a random number from 0 to 20 and adds it to the ArrayList data
-	} //end for
+      data = new ArrayList<Integer>(); //initializing data ArrayList
+      r = new Random(); //initializing Random object
+      for (int i=0;i<size;i++){ //loop from 0 to size - 1 (inclusive) increments by 1
+          data.add(r.nextInt(20));  //generates a random number from 0 to 20 and adds it to the ArrayList data
+      } //end for
     } //end SortDemo(int size)
+
   public int get(int index){
     	return this.data.get(index);
         }
@@ -48,19 +51,21 @@ public class sortDemo{
       6 which is the index with the smallest value from start to end
     */
     public int findSmallestIndex(int start){
-	int smallIndex = start;
-	// start a variable at the one after start
-	// your code here
-	for(int i = start; i < data.size(); i++)
-	{
-	// loop from that variable to end and update smallIndex as needed
-	//is the current number smaller than the smallest number so far?
-		if( data.get(i) < data.get(smallIndex))
-		{
-			//update the smallest index
-			smallIndex =  i;
-		} //end if
+      int smallIndex = start;
+      // start a variable at the one after start
+      // your code here
+      for(int i = start; i < data.size(); i++)
+      {
+      // loop from that variable to end and update smallIndex as needed
+      //is the current number smaller than the smallest number so far?
+        if( data.get(i) < data.get(smallIndex))
+        {
+          //update the smallest index
+          smallIndex =  i;
+        } //end if
 	} //end for
+
+
 	// your code here
 	return smallIndex;
     } //end findSmallestIndex
@@ -76,12 +81,14 @@ public class sortDemo{
       data.set(Index2,TempValue1);
     }
     public void sort(){
-	int i;
-	for (i=0;i < data.size()-1; i++){
-    int tempSmallest = findSmallestIndex(i); //utilize previous method to find smallest index and assign it a local variable
-    swap(tempSmallest, i);
-	}
+      int i;
+      for (i=0;i < data.size()-1; i++){
+        int tempSmallest = findSmallestIndex(i); //utilize previous method to find smallest index and assign it a local variable
+        swap(tempSmallest, i);
+      }
     }
+
+    
     /* If you finish the lab early you can get started on this */
     public int linearSearch(int value){
 	// loop through the ArrayList data
