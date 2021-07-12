@@ -9,7 +9,8 @@ public class GuessStarter {
 	      int difference = 0;
 	      System.out.println("I'm thinking of a number between 0-100 (including both)...");
 	      System.out.print("Can you guess my number?:");
-	      //RANDOM NUMBER SELECTION
+	      
+        //RANDOM NUMBER SELECTION
 	      Random random = new Random();
 	      int yourNumber = random.nextInt(100) + 1;
 	      System.out.println(yourNumber);
@@ -24,7 +25,7 @@ public class GuessStarter {
 	      
 	      System.out.println("You were off by: " + difference);
 	      
-	  }
+	  } //end of method
 
 
 	}
