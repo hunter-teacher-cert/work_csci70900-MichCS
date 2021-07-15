@@ -78,7 +78,7 @@ public class Maze{
 			|| board[col][row]=='z'
 			|| board[col][row]=='.')
 			return false;
-
+    //s
 		// put ourselves in the maze
 		board[col][row]='z';
 		// RECURSIVE CALLS
