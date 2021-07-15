@@ -1,58 +1,103 @@
-  public static void main(String[] args) {
-	boolean solved;
-	/*
-	  Maze m = new Maze("maze.dat");
+import java.io.*;
+import java.util.*;
 
-	Maze m = new Maze("maze.dat");
-	System.out.println(m);
-	solved = m.solve(1,1);
-	*/
+public class Maze{
 
-	/*object created
-	  Knights k - new Knights(5);
-	  solved = k.solve(1,1);
-	*/ initializing knights
-	Knights k = new Knights(5);
-	k.solve(2,2,1); //referencing another class (anytime theres a dot)
+    private char[][] board;
+    private int rows = 25;
+    private int cols = 85;
 
+    private String clearScreen="[0;0H\n";
+
+    private void delay(int n)
+    {
+	try 
+	    {Thread.sleep(n);} 
+	catch(InterruptedException e)
+	    {}
     }
-}
-  32  code/maze/Maze.java 
-@@ -63,7 +63,37 @@ public String toString(){
+
+    public Maze(String filename){
+		try{
+			board = new char[cols][rows];
+			int row = 0;
+			int col = 0;
+
+			for (row = 0; row < rows; row++){
+				for (col = 0; col < cols ; col++){
+					board[col][row] = ' ';
+				}
+			}
+			
+		
+			File file = new File(filename);
+			FileReader reader = new FileReader(file);
+			BufferedReader breader = new BufferedReader(reader);
+			
+			String line;
+			row = 0;
+			while( (line=breader.readLine()) != null )  {
+				for (col = 0; col < line.length()-1 ; col++){
+					board[col][row] = line.charAt(col);
+				}//end for
+			row++;
+			}//end while
+			
+		} catch (IOException e){
+			e.printStackTrace();
+		}
+    
+    }//end Maze constructor
+
+    public String toString(){
+		int row,col;
+		String result = "";
+		for (row = 0; row < rows; row++){
+			for (col = 0; col < cols; col++){
+			result = result + board[col][row];
+			}
+			result = result +"\n";
+		}
+		return result;
     }
 
     public boolean solve(int col,int row){
-	return false; //initiaized to return false first run
-	boolean solved; //boolean empty - just gave a name - no assignment
+		boolean solved;
+		
+		System.out.println(clearScreen+this);
+		delay(100);
+		// BASE CASE 1 - solved
+		// if we found the exit we're done - return true
+		if (board[col][row]=='$')
+					return true;
 
-	System.out.println(clearScreen+this); //clearScreen= command
-	delay(100); //command built
-	// BASE CASE 1 - solved
-	// if we found the exit we're done - return true
-	if (board[col][row]=='$')
-			       return true;
+		// BASE CASE 2 - dead end
+		// if we hit a wall or our path, we can't go further this
+		// way - return false
+		if (board[col][row]==' '
+			|| board[col][row]=='z'
+			|| board[col][row]=='.')
+			return false;
 
-	// BASE CASE 2 - dead end
-	// if we hit a wall or our path, we can't go further this
-	// way - return false
-	if (board[col][row]==' '
-	    || board[col][row]=='z'
-	    || board[col][row]=='.')
-	    return false;
-      
-	// put ourselves in the maze
-	board[col][row]='z';
-	// RECURSIVE CALLS
-	// try all the spaces we can go to 
-	solved = solve(col+1,row);
-	if (!solved)
-	    solved = solve(col-1,row);
-	if (!solved)
-	    solved = solve(col,row+1);
-	if (!solved)
-	    solved = solve(col,row-1);
-	// since we're not done yet remove ourselves
-	board[col][row]='.';
-	return solved;
-    }
+		// put ourselves in the maze
+		board[col][row]='z';
+		// RECURSIVE CALLS
+		// try all the spaces we can go to 
+		solved = solve(col+1,row); // right
+		if (!solved)
+			solved = solve(col-1,row);	//left
+		if (!solved)
+			solved = solve(col,row+1);	//down
+		if (!solved)
+			solved = solve(col,row-1);	//up
 
+		// since we're not done yet remove ourselves
+		board[col][row]='.';
+		return solved;
+
+	}//end solve()
+
+    
+
+    
+}//end class Maze
