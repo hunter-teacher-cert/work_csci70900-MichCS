@@ -17,7 +17,7 @@ import java.util.Scanner;
 Based on the task, what could be a good name for the class?
 What (preventative debugging strategy) should we implement at the end of the class? ({}) */
 
-public class GuessStarter {
+public class LiveCodingLessonGuessStarter {
 
 
 /*To write successful code, what should the first step in this program be? (Create a psuedocode (visual aid) "Keys to Success")	
@@ -62,10 +62,9 @@ Provide a scenario when it is good to initialize outside of the main? (If the va
       1. How do we start a method? 
       2. What is this method's purpose?
       3. Should void or int be implemented here? (Void b/c we can print a statement)
-      4. Let's close the method. How do we do that? (})
-      */
-
-      }  
+      4. Let's close the method. How do we do that? */
+       }
+       
 	   //end of method
   
 
