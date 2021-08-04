@@ -3,7 +3,7 @@ import java.util.*;
 
 
 
-public class Mode{
+public class Mode {
   private ArrayList<Integer> inputData; //instant variable for array ArrayList
   private ArrayList<Integer> inputFreq; //array list to count the frequency of each item in it
   private Random r; //random number

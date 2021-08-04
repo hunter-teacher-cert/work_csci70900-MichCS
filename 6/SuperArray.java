@@ -14,7 +14,7 @@ Michelle Best, Dwayne Levene, Stephannia Kabanakis
 
 import java.io.*;
 import java.util.*;
-public class superArray{
+public class SuperArray {
 
 
   //instance vars

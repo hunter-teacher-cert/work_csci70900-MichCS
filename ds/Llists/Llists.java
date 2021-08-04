@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class Llist{
+public class Llist {
     private Node front; // the front of the list
 
     public  Llist(){
@@ -180,7 +180,7 @@ while (Node!=null){
     // does nothing if index out of bounds
     public void remove(int index){
 
-
+//Please see Queueve for applied knowledge of "remove"
 
     }
 

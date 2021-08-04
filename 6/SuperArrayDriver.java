@@ -1,8 +1,8 @@
 //Michelle best,Dwayne Levene, Stephannia Kabanakis
 import java.io.*;
 import java.util.*;
-public class superArrayDriver
-{
+public class SuperArrayDriver {
+  
   public static void main( String[] args )
   {
     System.out.println("Testing default constructor.");

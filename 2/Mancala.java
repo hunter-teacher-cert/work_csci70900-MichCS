@@ -127,68 +127,68 @@ public class Mancala {
 	
   public static void main(String[] args) {
 
-    //Create a static array to represent the starting gameboard
-    int[] startingBoard = {4,4,4,4,4,4,0,4,4,4,4,4,4,0};
-    
-    //showing users initial game board
+  //Create a static array to represent the starting gameboard
+  int[] startingBoard = {4,4,4,4,4,4,0,4,4,4,4,4,4,0};
+  
+  //showing users initial game board
+  printGameboard(startingBoard);
+  
+  //pocket is index from which we're drawing stones
+	//player1Turn indicates whether or not it's p1's turn
+  int pocket;
+	boolean player1Turn;
+
+	//keep playing until either player has no more stones in their pockets
+  while( (startingBoard[0] + startingBoard[1] +startingBoard[2] + startingBoard[3] + startingBoard[4] + startingBoard[5] != 0) && (startingBoard[7] + startingBoard[8] +startingBoard[9] + startingBoard[10] + startingBoard[11] + startingBoard[12] != 0) ) {
+      
+    //First player's turn. 
+    player1Turn = true;
+    pocket = askPlayer1(startingBoard);
+
+    //Executing first player's move
+    pocket = playerMove(startingBoard, pocket, player1Turn);
+  
+    //if p1's last stone falls in p1's pit, p1 goes again
+    if(pocket == 6){
+      System.out.println("Good move! Go again.");
+      printGameboard(startingBoard);
+      pocket = askPlayer1(startingBoard);
+      pocket = playerMove(startingBoard, pocket, player1Turn);
+    }
+	  
+    printGameboard(startingBoard);
+	  
+	  //Second player's turn.
+	  player1Turn = false;
+	  pocket = askPlayer2(startingBoard);
+	  
+	  //Executing second player's move
+	  pocket = playerMove(startingBoard, pocket, player1Turn);
+	  
+    //if p2's last stone falls in p2's pit, p2 goes again
+    if(pocket == 13){
+      System.out.println("Good move! Go again.");
+      printGameboard(startingBoard);
+      pocket = askPlayer2(startingBoard);
+      pocket = playerMove(startingBoard, pocket, player1Turn);
+    }
     printGameboard(startingBoard);
     
-    //pocket is index from which we're drawing stones
-    //player1Turn indicates whether or not it's p1's turn
-    int pocket;
-    boolean player1Turn;
-
-    //keep playing until either player has no more stones in their pockets
-    while( (startingBoard[0] + startingBoard[1] +startingBoard[2] + startingBoard[3] + startingBoard[4] + startingBoard[5] != 0) && (startingBoard[7] + startingBoard[8] +startingBoard[9] + startingBoard[10] + startingBoard[11] + startingBoard[12] != 0) ) {
-        
-      //First player's turn. 
-      player1Turn = true;
-      pocket = askPlayer1(startingBoard);
-
-      //Executing first player's move
-      pocket = playerMove(startingBoard, pocket, player1Turn);
-    
-      //if p1's last stone falls in p1's pit, p1 goes again
-      if(pocket == 6){
-        System.out.println("Good move! Go again.");
-        printGameboard(startingBoard);
-        pocket = askPlayer1(startingBoard);
-        pocket = playerMove(startingBoard, pocket, player1Turn);
-      }
-      
-      printGameboard(startingBoard);
-      
-      //Second player's turn.
-      player1Turn = false;
-      pocket = askPlayer2(startingBoard);
-      
-      //Executing second player's move
-      pocket = playerMove(startingBoard, pocket, player1Turn);
-      
-      //if p2's last stone falls in p2's pit, p2 goes again
-      if(pocket == 13){
-        System.out.println("Good move! Go again.");
-        printGameboard(startingBoard);
-        pocket = askPlayer2(startingBoard);
-        pocket = playerMove(startingBoard, pocket, player1Turn);
-      }
-      printGameboard(startingBoard);
-      
     }
-    //If one player has 0 stones in their row the game ends
-    System.out.print("Game over! ");
+      //If one player has 0 stones in their row the game ends
+      System.out.print("Game over! ");
 
-    //Calculate the number of stones each player has
-    int p1score = startingBoard[0] + startingBoard[1] +startingBoard[2] + startingBoard[3] + startingBoard[4] + startingBoard[5];
-    int p2score = startingBoard[7] + startingBoard[8] +startingBoard[9] + startingBoard[10] + startingBoard[11] + startingBoard[12];
+      //Calculate the number of stones each player has
+      int p1score = startingBoard[0] + startingBoard[1] +startingBoard[2] + startingBoard[3] + startingBoard[4] + startingBoard[5];
+      int p2score = startingBoard[7] + startingBoard[8] +startingBoard[9] + startingBoard[10] + startingBoard[11] + startingBoard[12];
 
-    //Print out the winner
-    if (p1score > p2score){
-      System.out.println("Player 1 wins!");
-    } else if (p1score < p2score) {
-      System.out.println("Player 2 wins!");
-    } else {
-      System.out.println("It's a tie!");
+      //Print out the winner
+      if (p1score > p2score){
+        System.out.println("Player 1 wins!");
+      } else if (p1score < p2score) {
+        System.out.println("Player 2 wins!");
+      } else {
+        System.out.println("It's a tie!");
     }
   }
 }

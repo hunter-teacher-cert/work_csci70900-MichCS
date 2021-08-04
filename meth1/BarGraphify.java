@@ -38,7 +38,7 @@ barGraphify(x)
 */
 import java.util.Arrays;
 //import java.util.*;
-public class barGraphify {
+public class BarGraphify {
 //Create a method for the array
   public static int[] printBarGraph(int a[]) {
 int [] x = new int[a.length];

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Maze{
+public class Maze {
 
     private char[][] board;
     private int rows = 25;

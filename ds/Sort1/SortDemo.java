@@ -18,7 +18,7 @@ Part 3:
   2. Uncomment the lines in sortDemoDriver to test.
 */
 
-public class sortDemo{
+public class SortDemo {
     /* Instance Variables */
     private ArrayList<Integer> data;  // to store the data
     private Random r;

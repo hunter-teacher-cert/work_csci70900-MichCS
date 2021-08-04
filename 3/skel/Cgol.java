@@ -1,8 +1,7 @@
-  
 import java.io.*;
 import java.util.*;
 
-/**
+/** skelteon file for...
    The Rules of Life:
    Survivals:
    * A cell with 2 or 3 living neighbours will survive for the next generation.
