@@ -21,3 +21,6 @@ public class sieve {
 
 			
 			return sieve;
+
+  }
+}

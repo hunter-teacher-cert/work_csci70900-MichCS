@@ -9,7 +9,8 @@ public class BSTree {
     }
 
 
-    public void insert(int key){
+       //if the tree is empty, manually insert the new node
+  public void insert(int key){
        TreeNode newNode = new TreeNode(key);
        
 
@@ -36,7 +37,7 @@ public class BSTree {
           }
         } //end of while loop
    
-      if (key > front.getValue()){
+      if (key > front.getData()){
         //insert on the getRight
         front.setRight(newNode);
       } else {
@@ -47,6 +48,7 @@ public class BSTree {
 
 
 
+  }
   public int search(int key){
 	TreeNode current = root;
 

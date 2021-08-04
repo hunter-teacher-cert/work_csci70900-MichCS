@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class TreeNode {
+public class TreeNode{
     private int data;
     private TreeNode left,right;
 
@@ -41,4 +41,3 @@ public class TreeNode {
 	return right;
     }
 }
-© 2021 GitHub, Inc.
