@@ -1,0 +1,42 @@
+Baffle
+
+
+
+
+Part 1.
+The output of the program is the following below:
+
+No, I wug.
+You wugga wug.
+I wug.
+
+
+The code starts out in the main to print out “No, I” then the code directs it to go to the method zoop in which the first step is to go to the method baffle. In baffle, the code is directed to print out on a new line “wug” and then head to the method ping for further directions. The method Ping direction is informed to print “.” Then, we go back to complete the next line of the method zoop: “You wugga.” Then, to the method baffle to print “wug” and then go back to the method ping to print a period. Returning to the method to complete it’s final task. The system will print out “I” and then direct itself to baffle to print “wug” , finally ending at ping’s method to print the period. 
+
+Part 2. 
+
+
+(Methods)       (Parameters)
+Main
+No, I
+
+
+Baffle
+wug
+
+
+Ping
+.
+
+
+
+
+
+
+Part 3:
+
+If we invoke baffle at the end of ping, we will have an infinite loop of:
+wug
+. 
+(repeat)
+
