@@ -1,4 +1,4 @@
-Computer Science, Lesson Plan
+# Computer Science, Lesson Plan
 
 
 **Grade: 5-6**

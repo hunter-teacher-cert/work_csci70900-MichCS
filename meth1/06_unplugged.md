@@ -1,6 +1,6 @@
 Marisa Laks, Michelle Best, and Benson Leung
 
-## Topic: Maze
+# Topic: Maze
 
 **Objective:** SWBAT design a maze and provide explicit instructions for solving the maze. This lesson will prepare students for pair programming by practicing the driver/navigator model.
 
