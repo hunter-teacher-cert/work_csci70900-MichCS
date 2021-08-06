@@ -20,13 +20,13 @@ Teacher will present a problem solving scenario - similar to the Netlogo models 
 
 ## Mini Lesson
 
-At the start of the mini-lesson, teacher will play the video (https://www.youtube.com/watch?v=AJXFiO-ULv0) to learn about the purpose of Netlogo. 
+At the start of the mini-lesson, teacher will play the [video] (https://www.youtube.com/watch?v=AJXFiO-ULv0) to learn about the purpose of Netlogo. 
 
 Students will be given a Google Slides document to download and select a few Netlogo tutorial videos (models) to explore. Students will interact with & explore 3-4 programs. At the end of each program, students will apply the "Stop & Jot" strategy to write: *observations, likes, thoughts, dislikes* of the program. Then, in groups discuss their findings. 
 
 *The purpose of this task is to allow students to explore a new program. Oftentimes, students learn better through self-exploration. New topics, lessons, and tasks become easier to learn and more intriguing to partake in when one explores.*
 
-Afterwards, teacher will display the scenario of the *Dining Philosophers* (https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers) and bridge a connection with teh problem solving scenario from the motivation. 
+Afterwards, teacher will display the scenario of the [*Link to Dining Philosophers*] (https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers) and bridge a connection with teh problem solving scenario from the motivation. 
 
 Teacher will break down the information from the link with the class. After reading, students will work in groups to brainstorm the question ** Can you think of a way to feed the philosophers?** After sharing results, teacher will proceed to read, *"How it Works" * section for students to see if their brainstorm (predictions) ideas were correct.
 
@@ -34,7 +34,7 @@ Teacher will break down the information from the link with the class. After read
 
 **LiveCoding Psuedocode centered activity:**
 
-Students work in groups for 25 minutes to brainstorm and write pseudocode for the development of *DiningPhilosophers*. Afterwards, teacher will begin *LiveCoding* using the following link (http://www.netlogoweb.org/launch#http://ccl.northwestern.edu/netlogo/models/models/Sample%20Models/Computer%20Science/Dining%20Philosophers.nlogo), thinking aloud to allow students to see how *DiningPhilosophers* is coded. Teacher will think aloud to demonstrate what one would do to begin coding this task.  
+Students work in groups for 25 minutes to brainstorm and write pseudocode for the development of *DiningPhilosophers*. Afterwards, teacher will begin *LiveCoding* using the following [link] (http://www.netlogoweb.org/launch#http://ccl.northwestern.edu/netlogo/models/models/Sample%20Models/Computer%20Science/Dining%20Philosophers.nlogo), thinking aloud to allow students to see how *DiningPhilosophers* is coded. Teacher will think aloud to demonstrate what one would do to begin coding this task.  
 
 ## Wrap Up: 
 As an **Exit Slip** Activity, students will compare and contrast their pre-requisite knowledge of language code vs Netlogo code. *What are similarities and differences between the two languages? What information can you use from another code language to support your coding experience in Netlogo? Would you recommend using pseudocode for Netlogo? Explain with reason.* 
