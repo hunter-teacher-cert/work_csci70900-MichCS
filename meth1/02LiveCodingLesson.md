@@ -1,4 +1,9 @@
-Live Coding Lesson: 
+# Live Coding Lesson: 
+
+**Grade: 5-6**
+
+
+### Purpose of Lesson:
 
 /* In this live coding lesson, teacher will use the strategy "Stop & Ask" and "Stop & Think" to complete the code with the students below. When teacher asks the questions, teacher will pause to allow for student to implement the strategy: Think, Pair, Share and for student responses. Let's begin:
 
